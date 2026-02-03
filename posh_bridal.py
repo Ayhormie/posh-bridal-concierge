@@ -1,4 +1,5 @@
 import streamlit as st
+from pathlib import Path
 
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(
@@ -14,73 +15,95 @@ st.markdown("""
 
 html, body, [class*="css"] {
     font-family: 'Montserrat', sans-serif;
-    background-color: #fffaf7;
+    background-color: #f9fbff;
 }
 
 .hero {
-    padding: 5rem 2rem;
+    padding: 4rem 1.5rem;
     text-align: center;
 }
 
 .hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 3.2rem;
-    color: #3d2b1f;
+    font-size: 3rem;
+    color: #1f3c88;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    color: #5a4a42;
-    max-width: 700px;
+    font-size: 1.15rem;
+    color: #3d4c66;
+    max-width: 720px;
     margin: auto;
 }
 
 .section {
-    padding: 4rem 2rem;
+    padding: 3.5rem 1.5rem;
     max-width: 1100px;
     margin: auto;
 }
 
 .section h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
-    color: #3d2b1f;
-    margin-bottom: 1.5rem;
+    font-size: 2.1rem;
+    color: #1f3c88;
+    margin-bottom: 1.2rem;
 }
 
 .section p {
     font-size: 1.05rem;
-    color: #5a4a42;
+    color: #3d4c66;
     line-height: 1.7;
 }
 
 .card {
     background: white;
-    padding: 2rem;
+    padding: 1.8rem;
     border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 12px 30px rgba(31,60,136,0.08);
     margin-bottom: 1.5rem;
+}
+
+.price {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1f3c88;
+    margin-bottom: 0.5rem;
 }
 
 .footer {
     text-align: center;
     padding: 3rem 1rem;
-    color: #7a6a60;
+    color: #6b7a99;
     font-size: 0.9rem;
 }
 
-.button {
-    display: inline-block;
-    margin-top: 1.5rem;
-    padding: 0.8rem 1.8rem;
-    background-color: #d4a373;
+/* WhatsApp floating button */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
     color: white;
-    border-radius: 30px;
+    padding: 14px 18px;
+    border-radius: 50%;
+    font-size: 22px;
     text-decoration: none;
-    font-weight: 500;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.2rem; }
+    .section h2 { font-size: 1.8rem; }
 }
 </style>
 """, unsafe_allow_html=True)
+
+# ---------------- LOGO (OPTIONAL) ----------------
+logo_path = Path("logo.png")
+if logo_path.exists():
+    st.image("logo.png", width=120)
 
 # ---------------- HERO ----------------
 st.markdown("""
@@ -88,9 +111,8 @@ st.markdown("""
     <h1>Posh Bridal Concierge</h1>
     <p>
         Your calm, trusted support on the most important day of your life.
-        We ensure your wedding day flows beautifully — stress-free, seamless, and unforgettable.
+        We help brides feel confident, supported, and fully present.
     </p>
-    <a class="button" href="#contact">Book a Consultation</a>
 </div>
 """, unsafe_allow_html=True)
 
@@ -99,85 +121,142 @@ st.markdown("""
 <div class="section">
     <h2>About Posh Bridal Concierge</h2>
     <p>
-        At <strong>Posh Bridal Concierge</strong>, we believe every bride deserves to feel calm,
-        confident, and fully present on her wedding day.
+        Posh Bridal Concierge provides professional bridal assistance designed
+        to remove stress and allow brides to fully enjoy their wedding experience.
     </p>
     <p>
-        I’m a professional bridal assistant with a passion for supporting brides through the most
-        emotional and meaningful moments of their lives. From the quiet moments of getting dressed
-        to the excitement just before walking down the aisle, I’m there — ensuring every detail is handled
-        and every worry is eased.
+        I offer calm, hands-on support before and during your big day —
+        managing details, coordinating vendors, and ensuring everything runs smoothly,
+        so you don’t have to.
     </p>
+</div>
+""", unsafe_allow_html=True)
+
+# ---------------- PRICING PACKAGES ----------------
+st.markdown("""
+<div class="section">
+    <h2>Pricing Packages</h2>
+
+    <div class="card">
+        <div class="price">Basic Package — ₦100,000</div>
+        <strong>On-the-Day Support</strong>
+        <ul>
+            <li>Bridal morning prep supervision & assistance</li>
+            <li>Vendor coordination & management during the event</li>
+            <li>Managing schedule & timeline adherence</li>
+            <li>Running errands & real-time troubleshooting</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <div class="price">Standard Package — ₦150,000</div>
+        <strong>Extended Bridal Support</strong>
+        <ul>
+            <li>All services included in the Basic Package</li>
+            <li>Pre-wedding support (photoshoot)</li>
+            <li>One cloth fitting</li>
+            <li>Final checklist & timeline confirmation</li>
+            <li>Bridal party coordination & support</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <div class="price">Premium Package — ₦250,000</div>
+        <strong>Full Bridal Concierge Experience</strong>
+        <ul>
+            <li>Vendor recommendations & liaising</li>
+            <li>Wedding timelines & checklist creation</li>
+            <li>Virtual wedding consultation sessions</li>
+            <li>Hotel booking assistance</li>
+            <li>Bridal outfit & accessories sourcing coordination</li>
+            <li>Engagement & pre-wedding event support</li>
+        </ul>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+# ---------------- REAL TESTIMONIALS ----------------
+st.markdown("""
+<div class="section">
+    <h2>What Brides Say</h2>
+
+    <div class="card">
+        “I honestly don’t know how I would have gotten through my wedding morning without her.
+        From calming my nerves to making sure everything was in place, she was truly my safe space.”
+        <br><br>
+        <strong>— Tolu, Lagos</strong>
+    </div>
+
+    <div class="card">
+        “She handled my dress, coordinated vendors, and kept everyone on schedule while I just enjoyed my day.
+        Having Posh Bridal Concierge was one of the best decisions I made for my wedding.”
+        <br><br>
+        <strong>— Amaka, Traditional & White Wedding</strong>
+    </div>
+
+    <div class="card">
+        “Professional, gentle, and extremely attentive.
+        She noticed details I would never have thought of and handled issues before they became problems.”
+        <br><br>
+        <strong>— Sade, Ibadan</strong>
+    </div>
+
+    <div class="card">
+        “What stood out the most was how calm she was.
+        That calmness transferred to me and my bridal party.
+        I felt supported emotionally and physically throughout the day.”
+        <br><br>
+        <strong>— Blessing, Wedding Day Client</strong>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+# ---------------- INQUIRY FORM ----------------
+st.markdown("""
+<div class="section">
+    <h2>Send an Inquiry</h2>
     <p>
-        This is more than a service. It’s personal care, calm reassurance, and dependable support —
-        all wrapped into one trusted presence by your side.
+        Interested in working together? Fill out the form below and I’ll get back to you shortly.
     </p>
 </div>
 """, unsafe_allow_html=True)
 
-# ---------------- SERVICES ----------------
-st.markdown("""
-<div class="section">
-    <h2>Services</h2>
+with st.form("inquiry_form"):
+    name = st.text_input("Full Name")
+    phone = st.text_input("Phone Number")
+    event_date = st.date_input("Wedding Date")
+    package = st.selectbox("Preferred Package", ["Basic", "Standard", "Premium"])
+    message = st.text_area("Tell me about your wedding")
 
-    <div class="card">
-        <strong>Wedding Day Bridal Assistance</strong><br>
-        Hands-on support from start to finish so you can enjoy every moment.
-    </div>
+    submitted = st.form_submit_button("Submit Inquiry")
 
-    <div class="card">
-        <strong>Dress & Veil Styling</strong><br>
-        Perfect adjustments, flawless draping, and calm handling of your gown.
-    </div>
-
-    <div class="card">
-        <strong>Timeline Coordination</strong><br>
-        Ensuring everything stays on schedule without stress or rushing.
-    </div>
-
-    <div class="card">
-        <strong>Emergency Bridal Support</strong><br>
-        From quick fixes to unexpected issues — you’re covered.
-    </div>
-
-    <div class="card">
-        <strong>Emotional Support</strong><br>
-        A calm, reassuring presence when emotions run high.
-    </div>
-</div>
-""", unsafe_allow_html=True)
-
-# ---------------- WHY CHOOSE US ----------------
-st.markdown("""
-<div class="section">
-    <h2>Why Brides Choose Posh</h2>
-    <p>• A calm and professional presence under pressure</p>
-    <p>• Attention to the smallest details</p>
-    <p>• Genuine care for the bride’s comfort and happiness</p>
-    <p>• Experience supporting both practical and emotional needs</p>
-    <p>• A luxury experience without feeling overwhelming</p>
-</div>
-""", unsafe_allow_html=True)
+    if submitted:
+        st.success("Thank you for reaching out 💙 Your inquiry has been received. I’ll be in touch shortly.")
 
 # ---------------- CONTACT ----------------
 st.markdown("""
-<div class="section" id="contact">
-    <h2>Get in Touch</h2>
+<div class="section">
+    <h2>Contact</h2>
     <p>
-        Let’s talk about how I can support you on your special day.
-        Reach out to book a consultation or ask any questions.
-    </p>
-    <p>
-        📞 <strong>WhatsApp:</strong> +234-XXX-XXX-XXXX<br>
-        📸 <strong>Instagram:</strong> @poshbridalconcierge<br>
-        ✉️ <strong>Email:</strong> poshbridalconcierge@gmail.com
+        📞 <strong>Call / WhatsApp:</strong> 08166344356<br>
+        📸 <strong>Instagram:</strong>
+        <a href="https://www.instagram.com/posh_bridalconcierge?igsh=MXFxcDRudTdiOTZlMQ==" target="_blank">
+        @posh_bridalconcierge</a><br>
+        🎵 <strong>TikTok:</strong>
+        <a href="https://www.tiktok.com/@posh_bridal_concierge" target="_blank">
+        @posh_bridal_concierge</a>
     </p>
 </div>
+""", unsafe_allow_html=True)
+
+# ---------------- WHATSAPP FLOATING BUTTON ----------------
+st.markdown("""
+<a href="https://wa.me/2348166344356" target="_blank" class="whatsapp">💬</a>
 """, unsafe_allow_html=True)
 
 # ---------------- FOOTER ----------------
 st.markdown("""
 <div class="footer">
-    © 2026 Posh Bridal Concierge • Crafted with care and quiet tech ✨
+    © 2026 Posh Bridal Concierge • Crafted with care & quiet technology ✨
 </div>
 """, unsafe_allow_html=True)
