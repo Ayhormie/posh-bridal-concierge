@@ -166,7 +166,7 @@ st.markdown("""
         and allow brides to fully enjoy their wedding experience.
     </p>
     <p>
-        I offer calm, hands-on support before and during your big day — managing details, 
+        I offer calm, hands-on support before and during your big day, managing details, 
         coordinating vendors, and ensuring everything runs smoothly, so you don’t have to.
     </p>
 </div>
@@ -175,11 +175,11 @@ st.markdown("""
 # ---------------- WHY CHOOSE US ----------------
 st.markdown("""
 <div class="section">
-    <h2>Why Brides Choose Posh</h2>
+    <h2>Why Brides Choose Us</h2>
     <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center;">
         <div class="card" style="flex: 1; min-width: 280px;">
             <strong>Calm & Composed</strong><br>
-            Bringing peace to your wedding day — no chaos, just support.
+            Bringing peace to your wedding day, no chaos, just support.
         </div>
         <div class="card" style="flex: 1; min-width: 280px;">
             <strong>Detail-Oriented</strong><br>
@@ -187,7 +187,7 @@ st.markdown("""
         </div>
         <div class="card" style="flex: 1; min-width: 280px;">
             <strong>Fully Present for You</strong><br>
-            So you can focus on love, joy, and memories — not logistics.
+            So you can focus on love, joy, and memories. Not logistics.
         </div>
     </div>
 </div>
@@ -196,7 +196,7 @@ st.markdown("""
 # ---------------- PRICING PACKAGES ----------------
 st.markdown("""
 <div class="section">
-    <h2>Pricing Packages</h2>
+    <h2>Our Packages</h2>
     <div class="card">
         <div class="price">Basic Package — ₦100,000</div>
         <strong>On-the-Day Support</strong>
@@ -236,7 +236,7 @@ st.markdown("""
 # ---------------- TESTIMONIALS ----------------
 st.markdown("""
 <div class="section">
-    <h2>What Brides Say</h2>
+    <h2>What Our Brides Say</h2>
     <div class="card">
         “I honestly don’t know how I would have gotten through my wedding morning without her. 
         From calming my nerves to making sure everything was in place, she was truly my safe space.”
@@ -263,9 +263,9 @@ st.markdown("""
 # ---------------- INQUIRY / WHATSAPP CTA ----------------
 st.markdown("""
 <div class="section" style="text-align: center;">
-    <h2>Ready to Make Your Day Stress-Free?</h2>
+    <h2>Ready to Experience/Have a Seamless and Stress-Free Day?</h2>
     <p style="margin-bottom: 2rem;">
-        Send a message on WhatsApp — tell me about your wedding, preferred package, 
+        Send a message on WhatsApp. Tell me about your wedding, preferred package, 
         and wedding date. I’ll reply within a few hours.
     </p>
     <a href="https://wa.me/2348166344356?text=Hi%20Posh%20Bridal%20Concierge!%20I'm%20interested%20in%20your%20services.%20My%20name%20is%20[Your%20Name],%20my%20wedding%20is%20on%20[Date],%20and%20I'm%20interested%20in%20the%20[Basic/Standard/Premium]%20package.%20Here's%20a%20bit%20about%20my%20wedding:" 
@@ -280,8 +280,8 @@ st.markdown("""
 <div class="section">
     <h2>Contact</h2>
     <p>
-        📞 <strong>Call / WhatsApp:</strong> 08166344356<br>
-        📸 <strong>Instagram:</strong> 
+         <strong>Call / WhatsApp:</strong> 08166344356<br>
+         <strong>Instagram:</strong> 
         <svg class="social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="24" height="24" rx="6" fill="url(#grad)"/>
             <defs>
@@ -297,7 +297,7 @@ st.markdown("""
         </svg>
         <a href="https://www.instagram.com/posh_bridalconcierge?igsh=MXFxcDRudTdiOTZlMQ==" target="_blank">
         @posh_bridalconcierge</a><br>
-        🎵 <strong>TikTok:</strong> 
+         <strong>TikTok:</strong> 
         <svg class="social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12.53 2C12.53 2 12.53 12.5 12.53 12.5C12.53 14.5 10.9 16 8.8 16C6.7 16 5 14.5 5 12.5C5 10.5 6.7 9 8.8 9C9.5 9 10.1 9.2 10.6 9.6L12.53 2Z" fill="black"/>
             <path d="M19 5.5C19 5.5 16.5 8 13.5 8V12.5C13.5 15 16 17.5 19 17.5" stroke="black" stroke-width="2" stroke-linecap="round"/>
