@@ -11,108 +11,140 @@ st.set_page_config(
 # ---------------- CUSTOM CSS ----------------
 st.markdown("""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500;600;700&display=swap');
 html, body, [class*="css"] {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f9fbff;
+    font-family: 'Montserrat', sans-serif !important;
+    background-color: #ffffff !important;
+}
+.stApp {
+    background-color: #ffffff !important;
 }
 .hero {
-    padding: 4rem 1.5rem;
+    padding: 5rem 1.5rem;
     text-align: center;
+    background: linear-gradient(to bottom, #f0f4ff, #ffffff);
 }
 .hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    color: #1f3c88;
+    font-size: 3.2rem;
+    color: #0f2a6e;
+    font-weight: 600;
 }
 .hero p {
-    font-size: 1.15rem;
-    color: #3d4c66;
+    font-size: 1.2rem;
+    color: #2c3e50;
     max-width: 720px;
     margin: auto;
 }
 .section {
-    padding: 3.5rem 1.5rem;
-    max-width: 1100px;
+    padding: 4rem 1.5rem;
+    max-width: 1200px;
     margin: auto;
 }
 .section h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.1rem;
-    color: #1f3c88;
-    margin-bottom: 1.2rem;
+    font-size: 2.4rem;
+    color: #0f2a6e;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 .section p {
-    font-size: 1.05rem;
-    color: #3d4c66;
-    line-height: 1.7;
+    font-size: 1.1rem;
+    color: #34495e;
+    line-height: 1.8;
 }
 .card {
-    background: white;
-    padding: 1.8rem;
-    border-radius: 16px;
-    box-shadow: 0 12px 30px rgba(31,60,136,0.08);
-    margin-bottom: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #ffffff !important;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(15,42,110,0.12) !important;
+    margin-bottom: 2rem;
+    border: 1px solid #e8f0ff;
+    transition: all 0.3s ease;
 }
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 16px 40px rgba(31,60,136,0.12);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(15,42,110,0.18) !important;
 }
 .price {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #1f3c88;
-    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f2a6e;
+    margin-bottom: 1rem;
+}
+ul {
+    color: #2c3e50;
+    font-size: 1.05rem;
+    line-height: 1.8;
 }
 .whatsapp-btn {
     display: inline-block;
     background-color: #25D366;
     color: white;
-    padding: 14px 28px;
+    padding: 16px 32px;
     border-radius: 50px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    text-decoration: none;
-    box-shadow: 0 6px 15px rgba(37,213,102,0.3);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none !important;  /* No underline */
+    box-shadow: 0 8px 20px rgba(37,213,102,0.35);
     transition: all 0.3s ease;
 }
 .whatsapp-btn:hover {
     background-color: #20b858;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(37,213,102,0.45);
+    text-decoration: none !important;
+}
+.social-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 8px;
 }
 .footer {
     text-align: center;
-    padding: 3rem 1rem;
-    color: #6b7a99;
-    font-size: 0.9rem;
+    padding: 4rem 1rem;
+    color: #7f8c8d;
+    font-size: 1rem;
+    border-top: 1px solid #eee;
 }
-/* WhatsApp floating button */
+/* WhatsApp floating */
 .whatsapp {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 25px;
+    right: 25px;
     background-color: #25D366;
     color: white;
-    padding: 14px 18px;
+    padding: 16px 20px;
     border-radius: 50%;
-    font-size: 22px;
-    text-decoration: none;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    font-size: 26px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     z-index: 1000;
 }
-/* Mobile optimization */
+.logo-container {
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+}
+.logo-img {
+    max-width: 180px;
+    width: 100%;
+    height: auto;
+}
 @media (max-width: 768px) {
-    .hero h1 { font-size: 2.2rem; }
-    .section h2 { font-size: 1.8rem; }
+    .hero h1 { font-size: 2.5rem; }
+    .section h2 { font-size: 2rem; }
+    .card { padding: 1.5rem; }
+    .logo-img { max-width: 140px; }
 }
 </style>
 """, unsafe_allow_html=True)
 
-# ---------------- LOGO (OPTIONAL) ----------------
-logo_path = Path("logo.png")
+# ---------------- BRAND LOGO ----------------
+logo_path = Path("posh logo.png")
 if logo_path.exists():
-    st.image("logo.png", width=120)
+    st.markdown('<div class="logo-container">', unsafe_allow_html=True)
+    st.image("posh logo.png", use_column_width=False, width=180, output_format="PNG")
+    st.markdown('</div>', unsafe_allow_html=True)
 
 # ---------------- HERO ----------------
 st.markdown("""
@@ -201,7 +233,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# ---------------- REAL TESTIMONIALS ----------------
+# ---------------- TESTIMONIALS ----------------
 st.markdown("""
 <div class="section">
     <h2>What Brides Say</h2>
@@ -250,9 +282,26 @@ st.markdown("""
     <p>
         📞 <strong>Call / WhatsApp:</strong> 08166344356<br>
         📸 <strong>Instagram:</strong> 
+        <svg class="social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" rx="6" fill="url(#grad)"/>
+            <defs>
+                <radialGradient id="grad" cx="0.5" cy="0.5" r="0.8">
+                    <stop offset="0%" stop-color="#feda75"/>
+                    <stop offset="30%" stop-color="#fa7e1e"/>
+                    <stop offset="60%" stop-color="#d62976"/>
+                    <stop offset="100%" stop-color="#962fbf"/>
+                </radialGradient>
+            </defs>
+            <circle cx="12" cy="12" r="5" stroke="white" stroke-width="2"/>
+            <circle cx="18" cy="6" r="1.5" fill="white"/>
+        </svg>
         <a href="https://www.instagram.com/posh_bridalconcierge?igsh=MXFxcDRudTdiOTZlMQ==" target="_blank">
         @posh_bridalconcierge</a><br>
         🎵 <strong>TikTok:</strong> 
+        <svg class="social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.53 2C12.53 2 12.53 12.5 12.53 12.5C12.53 14.5 10.9 16 8.8 16C6.7 16 5 14.5 5 12.5C5 10.5 6.7 9 8.8 9C9.5 9 10.1 9.2 10.6 9.6L12.53 2Z" fill="black"/>
+            <path d="M19 5.5C19 5.5 16.5 8 13.5 8V12.5C13.5 15 16 17.5 19 17.5" stroke="black" stroke-width="2" stroke-linecap="round"/>
+        </svg>
         <a href="https://www.tiktok.com/@posh_bridal_concierge" target="_blank">
         @posh_bridal_concierge</a>
     </p>
